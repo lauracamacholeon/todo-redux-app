@@ -1,0 +1,9 @@
+<li [ngClass]="{ completed: todo.completado, editing: edit }">
+  <div class="view">
+    <input class="toggle" type="checkbox" [formControl]="checkCompleted" />
+    <label (dblclick)="editar()">{{ todo.texto }}</label>
+    <button (click)="borrar()" class="destroy"></button>
+  </div>
+  <!-- blur = es cuando pierde el foco que hace llama un metodo llamado terminar edicion -->
+  <input (blur)="terminarEdicion()" #inputFisico class="edit" [formControl]="txtEdit" type="text" />
+</li>

@@ -1,0 +1,5 @@
+<header class="header">
+  <h1>todos</h1>
+  <!-- cuando presiona el enter =  keydown -->
+  <input class="new-todo" (keydown.enter)="agregar()"  [formControl]="txtInput"  placeholder="What needs to be done?" autofocus />
+</header>
